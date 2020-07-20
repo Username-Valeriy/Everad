@@ -20,8 +20,9 @@ INITIALIZATION FUNCTIONS
 jQuery( document ).ready( function( $ ) {
 
      new Swiper('.sliders-container', {
-        slidesPerView: 3,
-        spaceBetween: 80,
+         pagination: {
+             el: '.swiper-pagination',
+         },
          navigation: {
              nextEl: '.swiper-button-next',
              prevEl: '.swiper-button-prev',
@@ -29,10 +30,16 @@ jQuery( document ).ready( function( $ ) {
          breakpoints: {
              320: {
                  slidesPerView: 1,
-                 spaceBetween: 20
              },
              767: {
-
+                 spaceBetween: 30,
+                 slidesPerView: 2,
+             },
+             1024: {
+                 slidesPerView: 3,
+             },
+             1100: {
+                 spaceBetween: 80,
              }
          }
     });
